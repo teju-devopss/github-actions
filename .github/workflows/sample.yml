@@ -1,5 +1,7 @@
+name: Reusable Workflow Example
+on: [push,pull_request]
 jobs:
-  CI_Steps:
+  common:
     runs-on: self-hosted
     steps:
       - name: Checkout

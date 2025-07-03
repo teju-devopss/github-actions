@@ -1,4 +1,4 @@
-name: Developer_Pull_Request_CI
+name: sample
 on:
   push:
     branches:
@@ -6,17 +6,4 @@ on:
 
 jobs:
   CI_Steps:
-    runs-on: self-hosted
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Unit Tests
-        run: echo Unit Tests
-      - name: Integration Testing
-        run: echo Integration Testing
-      - name: SAST Scans
-        run: echo sast scans
-      - name: secrets in Source Code
-        run: echo secrets in source code
-      - name: Code Quality
-        run: echo code Quality
+    uses: teju-devopss/github-actions/.github/workflows/sample.yml@main
