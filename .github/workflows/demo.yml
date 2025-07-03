@@ -1,9 +1,0 @@
-name: sample
-on:
-  push:
-    branches:
-      - 'main'
-
-jobs:
-  CI_Steps:
-    uses: teju-devopss/github-actions/.github/workflows/sample.yml@main
