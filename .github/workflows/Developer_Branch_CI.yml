@@ -1,7 +1,8 @@
-name: Reusable Workflow Example
+name: Developer_Branch_CI
 on: [workflow_call]
+
 jobs:
-  common:
+  CI_Steps:
     runs-on: self-hosted
     steps:
       - name: Checkout
@@ -10,9 +11,5 @@ jobs:
         run: echo Unit Tests
       - name: Integration Testing
         run: echo Integration Testing
-      - name: SAST Scans
-        run: echo sast scans
-      - name: secrets in Source Code
-        run: echo secrets in source code
       - name: Code Quality
         run: echo code Quality

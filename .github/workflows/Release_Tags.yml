@@ -1,18 +1,20 @@
-name: Reusable Workflow Example
+name: Release_Tags
 on: [workflow_call]
+
 jobs:
-  common:
+  CI_Steps:
     runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Unit Tests
-        run: echo Unit Tests
-      - name: Integration Testing
-        run: echo Integration Testing
+
       - name: SAST Scans
         run: echo sast scans
+      - name: SCA Scans
+        run: echo sCA scans
+
       - name: secrets in Source Code
         run: echo secrets in source code
-      - name: Code Quality
-        run: echo code Quality
+
+      - name: Produce Artifact
+        run: echo Produce Artifact

@@ -1,7 +1,8 @@
-name: Reusable Workflow Example
+name: Developer_Pull_Request_CI
 on: [workflow_call]
+
 jobs:
-  common:
+  CI_Steps:
     runs-on: self-hosted
     steps:
       - name: Checkout
