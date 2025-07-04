@@ -14,7 +14,7 @@ jobs:
       - name: Code Quality
         run: |
           sonar-scanner \
-            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
+            -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000 \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} \
+            -Dsonar.projectKey=expense-backend \
             -Dsonar.qualitygate.wait=true
