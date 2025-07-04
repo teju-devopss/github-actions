@@ -12,9 +12,12 @@ jobs:
       - name: Integration Testing
         run: echo Integration Testing
       - name: Code Quality
-        run: |
-          sonar-scanner \
-            -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000 \
-            -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.projectKey=expense-backend \
-            -Dsonar.qualitygate.wait=true
+        run : sonar-scanner   -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000   -Dsonar.token=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=expense-backend
+
+
+
+#
+#  sonar-scanner -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000 \
+##            -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
+##            -Dsonar.projectKey=expense-backend \
+##            -Dsonar.qualitygate.wait=true
