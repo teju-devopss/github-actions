@@ -1,5 +1,5 @@
 name: Developer_Branch_CI
-on: [workflow_call]
+on: [ workflow_call ]
 
 jobs:
   CI_Steps:
@@ -16,7 +16,7 @@ jobs:
           sonar-scanner \
             -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000 \
             -Dsonar.token=$SONAR_TOKEN \
-            -Dsonar.projectKey=${service_name}
+            -Dsonar.projectKey=$service_name
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           service_name: ${{ inputs.service_name }}
