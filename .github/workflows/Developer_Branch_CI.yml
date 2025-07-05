@@ -18,7 +18,7 @@ jobs:
         run: echo Integration Testing
       - name: Code Quality
         shell: bash
-        run: sonar-scanner -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000 -Dsonar.token=$SONAR_TOKEN -Dsonar.projectKey=$service_name
+        run: sonar-scanner -Dsonar.host.url=http://sonarqube-int.tejudevops.online:9000 -Dsonar.token=$SONAR_TOKEN -Dsonar.projectKey=$service_name -Dsonar.qualitygate.wait=true
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           service_name: ${{ inputs.service_name }}
