@@ -1,5 +1,10 @@
 name: Release_Tags
-on: [workflow_call]
+on:
+  workflow_call:
+    inputs:
+      service_name:
+        type: string
+        required: true
 
 jobs:
   CI_Steps:
